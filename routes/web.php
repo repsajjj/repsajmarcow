@@ -15,21 +15,16 @@ Route::get('/', function () {
    return view('welcome',['name'=>'Jasper']);
 });
 
-Route::get('/gear', function () {
-    return view('gear');
+Route::get('/admin', function () {
+    return view('admin',[]);
  });
 
 
-
-/*
-Route::post('foo/bar', function () {
-   return 'Hello World';
+ Route::post('/audio', function (Request $request) {
+    //
 });
 
-Route::put('foo/bar', function () {
-   //
-});
 
-Route::delete('foo/bar', function () {
-   ///
-});*/
+Route::delete('/audio/{id}', function ($id) {
+    //
+});
