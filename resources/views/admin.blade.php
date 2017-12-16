@@ -1,38 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <!-- Bootstrap Boilerplate... -->
-
-    <div class="panel-body">
+    <div class="panel-body" >
         <!-- Display Validation Errors -->
         @include('common.errors')
-
-      
-        <form action="/audios" method="POST" class="form-horizontal">
+        <div id="form_gear">  
         
-            {{ csrf_field() }}
-
-            
-            <div class="form-group">
-                <h2>Audio</h2>
-                <label for="audio" class="col-sm-3 control-label">Audio Product</label>
-
-                <div class="col-sm-6">
-                    <input type="text" name="name" id="audio-product" class="form-control">
-                </div>
-            </div>
-
-            <!-- Add Task Button -->
-            <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-6">
-                    <button type="submit" class="btn btn-default">
-                        <i class="fa fa-plus"></i> Add audio gear
-                    </button>
-                </div>
-            </div>
-        </form>
+            {{ Form::open(array('url' => 'gear')) }}
+            {{Form::label('brand', 'Brand')}} {{Form::text('brand')}}</br>
+            {{Form::label('type', 'Type')}} {{Form::text('type')}}</br> 
+            {{Form::label('image', 'Image')}} {{Form::text('image')}} </br>  
+            {{Form::label('sort', 'Sort')}} {{Form::select('sort', array('Audio' => 'Audio',
+                                                                        'Light' => 'Light',
+                                                                        'Other' => 'Other'))
+                                            }} </br>  
+            {{Form::submit('Add gear')}}
+            {{ Form::close() }}         
+       </div>          
     </div>
-
-    <!-- TODO: Current Tasks -->
 @endsection

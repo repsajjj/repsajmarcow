@@ -1,5 +1,6 @@
 <?php
-
+use App\Models\Gear;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,8 +21,14 @@ Route::get('/admin', function () {
  });
 
 
- Route::post('/audio', function (Request $request) {
-    //
+ Route::post('/gear', function (Request $request) {    
+    $gear = new Gear;
+    $gear->brand = $request->brand;  
+    $gear->type = $request->type;
+    $gear->image = $request->image;
+    $gear->sort = $request->sort;
+    $gear->save();
+    return redirect('/');
 });
 
 
