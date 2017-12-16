@@ -20,6 +20,10 @@ Route::get('/admin', function () {
     return view('admin',[]);
  });
 
+ Route::get('/gear', function () {
+    $gears=DB::table('gears')->get();     
+    return view('gear',['gears'=>$gears]);
+ });
 
  Route::post('/gear', function (Request $request) {    
     $gear = new Gear;
@@ -29,9 +33,4 @@ Route::get('/admin', function () {
     $gear->sort = $request->sort;
     $gear->save();
     return redirect('/');
-});
-
-
-Route::delete('/audio/{id}', function ($id) {
-    //
 });

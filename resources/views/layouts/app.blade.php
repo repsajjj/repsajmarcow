@@ -17,8 +17,8 @@
                         <a class="navbar-brand" href="/">Repsaj & Marco(w)</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#">Gear</a></li>
+                        <li> <a href="/">Home</a></li>
+                        <li><a href="/gear">Gear</a></li>
                         <li><a href="#">Pictures</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
