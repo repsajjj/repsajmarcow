@@ -14,6 +14,13 @@
 Route::get('/', function () {
    return view('welcome',['name'=>'Jasper']);
 });
+
+Route::get('/gear', function () {
+    return view('gear');
+ });
+
+
+
 /*
 Route::post('foo/bar', function () {
    return 'Hello World';
