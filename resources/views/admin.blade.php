@@ -8,12 +8,14 @@
         <!-- Display Validation Errors -->
         @include('common.errors')
 
-      <h2>Audio</h2>
+      
         <form action="/audios" method="POST" class="form-horizontal">
+        
             {{ csrf_field() }}
 
             
             <div class="form-group">
+                <h2>Audio</h2>
                 <label for="audio" class="col-sm-3 control-label">Audio Product</label>
 
                 <div class="col-sm-6">
