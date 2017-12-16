@@ -10,7 +10,7 @@
      </head>
 
     <body>
-        <div class="container">
+        <div class="flex-center position-ref full-height">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -26,7 +26,7 @@
                 </div>
             </nav>
         </div>
-
+        
         @yield('content')
     </body>
 </html>
