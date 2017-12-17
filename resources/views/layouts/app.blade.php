@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
         <script src="{{ URL::asset('/js/app.js') }}"></script>
         <meta name="csrf-token" content="{{ csrf_token() }}">
- 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
      </head>
 
     <body>
