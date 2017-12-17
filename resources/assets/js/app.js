@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./jssor.slider.min');
 
 window.Vue = require('vue');
 
@@ -15,3 +16,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+jQuery(document).ready(function ($) {
+    jssor_slider1_init = function (containerId) {
+        var options = { $AutoPlay: 1,
+                        };
+        var jssor_slider1 = new $JssorSlider$(containerId, options);
+    }
+
+});

@@ -16,6 +16,17 @@ Route::get('/', function () {
     return view('welcome',[]);
  });
 
+ Route::get('/gallery', function () {
+    $files = glob('images/production/*.{jpg,png,gif}', GLOB_BRACE);
+    $filenames=array();
+    $i=0;
+    foreach($files as $file) {
+      $filenames[$i]=$file;
+      $i++;
+    }
+    return view('gallery',['filenames'=>$filenames]);
+ });
+
 Route::get('/admin', function () {
     if($user = Auth::user())
     {

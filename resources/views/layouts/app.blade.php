@@ -20,15 +20,19 @@
                     <ul class="nav navbar-nav">
                         <li> <a href="/">Home</a></li>
                         <li><a href="/gear">Gear</a></li>
-                        <li><a href="#">Pictures</a></li>
+                        <li><a href="/gallery">Pictures</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
-                        @if(Auth::check())
-                        <li><a href="/register">Add user</a></li>
-                        <li><a href="/admin">Admin panel</a></li>                        
-                        <li><a href="/logout">Logout</a></li>
-                       @endif
                     </ul>
+                    @if(Auth::check())
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Add user</a></li>	
+                        <li><a href="/admin"><span class="glyphicon glyphicon-th"></span> Admin panel</a></li>                        
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                        
+                    @endif
+                    
                 </div>
             </nav>
         </div>
