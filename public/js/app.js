@@ -994,6 +994,7 @@ jQuery(document).ready(function ($) {
     };
     var jssor_slider1 = new $JssorSlider$(containerId, options);
   };
+  jssor_slider1_init("jssor_slider1_container");
 });
 
 /***/ }),
