@@ -4,7 +4,7 @@
 
 <div class="container">
 
-<div id="jssor_slider1_container" style="position:relative;top:35%;left:25%;width:740px;height:480px;">
+<div id="jssor_slider1_container" style="position:relative;top:35%;left:15%;width:740px;height:480px;">
     <div u="slides" style="position:absolute;overflow:hidden;left:0px;top:0px;width:740px;height:480px;">
         @foreach ($filenames as $filename)  
         
