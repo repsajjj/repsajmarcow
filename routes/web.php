@@ -51,14 +51,14 @@ Route::get('/logout', function () {
  
 Auth::routes();
 
-
+/*
 Route::get('/register', function(){
     return redirect('/');
 } );
 
 Route::post('/register', function(){
     return redirect('/');
-});
+});*/
 
 
     
