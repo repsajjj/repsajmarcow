@@ -986,33 +986,6 @@ window.Vue = __webpack_require__(35);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-window.onload = function () {
-    var app = new Vue({
-        el: '#form_gear',
-        data: {
-            message: 'Update New Post:',
-            content: 'test',
-            _token: '{{csrf_token()}}'
-        },
-
-        methods: {
-            addGear: function addGear() {
-                var formData = new FormData();
-
-                formData.append('brand', this.$refs.brand.value);
-                formData.append('type', this.$refs.type.value);
-                formData.append('image', this.$refs.image.value);
-                formData.append('sort', this.$refs.sort.value);
-
-                axios.post('/gear', { formData: formData }).then(function (response) {
-                    window.location = response.data.redirect;
-                }).catch(function (error) {
-                    console.log(error);
-                });
-            }
-        }
-    });
-};
 
 /***/ }),
 /* 11 */

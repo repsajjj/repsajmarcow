@@ -6,6 +6,7 @@
         <!-- CSS And JavaScript -->
         <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
         <script src="{{ URL::asset('/js/app.js') }}"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
  
      </head>
 
@@ -22,6 +23,11 @@
                         <li><a href="#">Pictures</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
+                        @if(Auth::check())
+                        <li><a href="/register">Add user</a></li>
+                        <li><a href="/admin">Admin panel</a></li>                        
+                        <li><a href="/logout">Logout</a></li>
+                       @endif
                     </ul>
                 </div>
             </nav>

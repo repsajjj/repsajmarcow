@@ -13,11 +13,18 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-   return view('welcome',['name'=>'Jasper']);
-});
+    return view('welcome',[]);
+ });
 
 Route::get('/admin', function () {
-    return view('admin',[]);
+    if($user = Auth::user())
+    {
+        return view('admin',[]);
+    }
+    else{
+        return redirect('/');
+    }
+    
  });
 
  Route::get('/gear', function () {
@@ -34,3 +41,27 @@ Route::get('/admin', function () {
     $gear->save();
     return redirect('/');
 });
+
+Route::get('/login', 'AuthController@index')->name('auth');
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+ });
+
+ 
+Auth::routes();
+
+
+Route::get('/register', function(){
+    return redirect('/');
+} );
+
+Route::post('/register', function(){
+    return redirect('/');
+});
+
+
+    
+
+
+
