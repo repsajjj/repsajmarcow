@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://www.repsaj.repsajmarcow.be/laravel'),
+    'url' => env('APP_URL', 'https://www.repsaj.repsajmarcow.be/laravel'),
 
     /*
     |--------------------------------------------------------------------------
