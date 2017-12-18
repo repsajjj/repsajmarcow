@@ -16,27 +16,6 @@ Route::get('/', function () {
     return view('welcome',[]);
  });
 
- Route::get('/gallery', function () {
-    $files = glob('images/production/*.{jpg,png,gif}', GLOB_BRACE);
-    $filenames=array();
-    $i=0;
-    foreach($files as $file) {
-      $filenames[$i]=$file;
-      $i++;
-    }
-    return view('gallery',['filenames'=>$filenames]);
- });
-
-Route::get('/admin', function () {
-    if($user = Auth::user())
-    {
-        return view('admin',[]);
-    }
-    else{
-        return redirect('/');
-    }
-    
- });
 
  Route::get('/gear', function () {
     $gears=DB::table('gears')->get();     
@@ -64,21 +43,60 @@ Route::get('/admin', function () {
     return redirect('/');
 });
 
-Route::get('/contact', 
+
+ Route::get('/gallery', function () {
+    $files = glob('images/production/*.{jpg,png,gif}', GLOB_BRACE);
+    $filenames=array();
+    $i=0;
+    foreach($files as $file) {
+      $filenames[$i]=$file;
+      $i++;
+    }
+    return view('gallery',['filenames'=>$filenames]);
+ });
+
+
+ Route::get('/about', function () {
+
+    return view('about.home');
+ });
+
+ 
+ Route::get('/contact', 
     ['as' => 'contact', 'uses' => 'AboutController@create']
 );
-
 Route::post('/contact', 
     ['as' => 'contact_store', 'uses' => 'AboutController@store']
 );
 
+
+
+
+
+Route::get('/admin', function () {
+    if($user = Auth::user())
+    {
+        return view('admin',[]);
+    }
+    else{
+        return redirect('/');
+    }
+    
+ });
+
+
+
+
+
 Route::get('/login', 'AuthController@index')->name('auth');
+
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('/');
  });
 
  
+
 Auth::routes();
 
 
