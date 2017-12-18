@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Gear</h1></br>
     <div class="panel-body" >
+        <h1>Gear</h1></br>
         <!-- Display Validation Errors -->
-        @include('common.errors')     
+        @include('common.errors')
         <div class="row">
         @foreach ($gears as $gear)
         <div class="col-sm-3">
@@ -18,7 +18,6 @@
             </div>
         </div>
         @endforeach
-        </div>        
+        </div>
     </div>
 @endsection
-
