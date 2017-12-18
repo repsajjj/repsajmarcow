@@ -8350,3 +8350,13 @@ button.close {
   }
 }
 
+div.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+div#about-us {
+  margin-top: -1.5%;
+  margin-left: 60vh;
+}
+

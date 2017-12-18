@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>About us</h1>
-    <div class="panel-body" >
-        
+    <div class="panel-body" id="about-us">
+        <h1>About us</h1>
+
         <p>Repsaj & Marco(w) are a DJ duo who smashes the biggest hits at your party in combination with a spectacular lightshow.</p></br>
 
          <p>References:
