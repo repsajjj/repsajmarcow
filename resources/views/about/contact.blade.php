@@ -35,7 +35,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::submit('Contact Us!', 
+    {!! Form::submit('Contact Us', 
       array('class'=>'btn btn-primary')) !!}
 </div>
 {!! Form::close() !!}
