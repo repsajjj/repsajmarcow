@@ -13,7 +13,14 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome',[]);
+    $files = glob('images/production/*.{jpg,png,gif}', GLOB_BRACE);
+    $filenames=array();
+    $i=0;
+    foreach($files as $file) {
+      $filenames[$i]=$file;
+      $i++;
+    }
+    return view('welcome',['filenames'=>$filenames]);
  });
 
 
