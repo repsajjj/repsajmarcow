@@ -27,6 +27,9 @@ Route::get('/', function () {
         'brand' => 'required',
         'type' => 'required',
         'image' => 'required| mimes:jpeg,jpg,png|max:5240',
+        'sort' => 'required',
+        'price' => 'required',
+        'description' => 'required',
     ]);
 
     $imagefile = $request->file('image');  
@@ -39,6 +42,8 @@ Route::get('/', function () {
     $gear->type = $request->type;
     $gear->image = $image_name;
     $gear->sort = $request->sort;
+    $gear->price = $request->price;
+    $gear->description = $request->description;    
     $gear->save();
     return redirect('/');
 });

@@ -12,7 +12,7 @@
                 <img class="card-img-top" src="images/gear/{{ $gear->image }}" alt="Card image cap"  height="250" width="250">
                 <div class="card-body">
                     <h4 class="card-title">{{ $gear->brand }} {{ $gear->type }}</h4>
-                    <p class="card-text">Description</p>
+                    <p class="card-text">Description: {{ $gear->description }}</p>
                     <p class="card-text"><small class="text-muted"> {{ $gear->sort }}</small></p>
                 </div>
             </div>
