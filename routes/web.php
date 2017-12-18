@@ -64,6 +64,14 @@ Route::get('/admin', function () {
     return redirect('/');
 });
 
+Route::get('/contact', 
+    ['as' => 'contact', 'uses' => 'AboutController@create']
+);
+
+Route::post('/contact', 
+    ['as' => 'contact_store', 'uses' => 'AboutController@store']
+);
+
 Route::get('/login', 'AuthController@index')->name('auth');
 Route::get('/logout', function () {
     Auth::logout();

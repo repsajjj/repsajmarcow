@@ -22,20 +22,23 @@
                         <li><a href="/gear">Gear</a></li>
                         <li><a href="/gallery">Pictures</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                     @if(Auth::check())
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Add user</a></li>	
                         <li><a href="/admin"><span class="glyphicon glyphicon-th"></span> Admin panel</a></li>                        
                         <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                    </ul>
-                        
-                    @endif
-                    
+                    </ul>                        
+                    @endif                    
                 </div>
             </nav>
-        </div>        
-        @yield('content')
+        </div> 
+        @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif     
+        @yield('content')          
     </body>
 </html>
