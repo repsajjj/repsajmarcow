@@ -5,7 +5,7 @@
     
         <!-- Display Validation Errors -->
         @include('common.errors')
-        <h1>Gear</h1>
+        <h1>Gear</h1></br>
         
         <div class="row">
         @foreach ($gears as $gear)
