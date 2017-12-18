@@ -35,8 +35,7 @@
                     
                 </div>
             </nav>
-        </div>
-        
+        </div>        
         @yield('content')
     </body>
 </html>

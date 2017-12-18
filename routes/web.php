@@ -43,11 +43,22 @@ Route::get('/admin', function () {
     return view('gear',['gears'=>$gears]);
  });
 
- Route::post('/gear', function (Request $request) {    
+ Route::post('/gear', function (Request $request) {
+    $validatedData = $request->validate([
+        'brand' => 'required',
+        'type' => 'required',
+        'image' => 'required| mimes:jpeg,jpg,png|max:5240',
+    ]);
+
+    $imagefile = $request->file('image');  
+    $destinationPath = 'images/gear';
+    $image_name=$request->brand."_".$request->type.".".$imagefile->getClientOriginalExtension();
+    $imagefile->move($destinationPath,$image_name); 
+
     $gear = new Gear;
     $gear->brand = $request->brand;  
     $gear->type = $request->type;
-    $gear->image = $request->image;
+    $gear->image = $image_name;
     $gear->sort = $request->sort;
     $gear->save();
     return redirect('/');
