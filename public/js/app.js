@@ -990,7 +990,8 @@ window.Vue = __webpack_require__(36);
 
 jQuery(document).ready(function ($) {
   jssor_slider1_init = function jssor_slider1_init(containerId) {
-    var options = { $AutoPlay: 1
+    var options = { $AutoPlay: 1,
+      $FillMode: 2
     };
     var jssor_slider1 = new $JssorSlider$(containerId, options);
   };

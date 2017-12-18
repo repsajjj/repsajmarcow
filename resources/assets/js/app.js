@@ -19,6 +19,7 @@ window.Vue = require('vue');
 jQuery(document).ready(function ($) {
     jssor_slider1_init = function (containerId) {
         var options = { $AutoPlay: 1,
+                        $FillMode: 2,
                         };
         var jssor_slider1 = new $JssorSlider$(containerId, options);
     }
