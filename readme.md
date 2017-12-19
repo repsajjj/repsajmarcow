@@ -22,7 +22,7 @@ php artisan migrate
 ## Example
 ``` powershell
 php artisan serve           Start the webapplication at localhost:8000.
-npm watch                   Update the css & js automatics when you save something.
+npm watch                   Update the css & js automatic when you save something.
 ```
 
 ## Shipping change
