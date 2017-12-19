@@ -31,7 +31,7 @@ If you find a bug please report it to: <info@repsajmarcow.be>
 
 
 ## License & author info
-        Copyright &copy 2017 Repsaj & Marco(w)
+        Copyright (C) 2017 Repsaj & Marco(w)
 
          Permission is hereby granted, free of charge, to any person
          obtaining a copy of this software and associated documentation
