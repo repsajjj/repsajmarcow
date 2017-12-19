@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>RM</title>
+    <title>R&M</title>
 
     <!-- CSS And JavaScript -->
     <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
